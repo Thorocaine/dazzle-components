@@ -8,10 +8,7 @@ import styled from 'styled-components';
 
 const t = `gg ${Color.red()}`;
 
-const MyBlock = styled(Block)`
-  width: 100%;
-  height: 50px;
-`;
+const MyBlock = styled(Block).attrs({ shadow: true })``;
 
 const base = new Color(174, 97, 43);
 const Base = styled(MyBlock)`
@@ -50,7 +47,7 @@ const [Tet1, Tet2, Tet3] = base.tetradic().map(
 );
 
 ReactDOM.render(
-  <Theme theme={{ background: 'lightblue' }}>
+  <Theme theme={{}}>
     <NavBar>
       123<i>456</i>789
     </NavBar>

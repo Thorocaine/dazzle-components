@@ -15,6 +15,10 @@ class Color extends Array<InterpolationValue> {
   public static red = () => new Color(360, 100, 50);
   public static green = () => new Color(120, 100, 50);
   public static blue = () => new Color(240, 100, 50);
+  public static white = () => new Color(0, 0, 100);
+
+  public lighten = (x: number) =>
+    new Color(this.hue, this.saturation, this.light + x);
 
   public turn = (x: number) =>
     new Color(this.hue + x, this.saturation, this.light);
