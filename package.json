@@ -4,7 +4,6 @@
   "description": "a UI component library for myself to play with",
   "main": "index.js",
   "dependencies": {
-    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
@@ -43,6 +42,7 @@
   "homepage": "https://github.com/Thorocaine/dazzle-components#readme",
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addon-storyshots": "^5.1.11",
     "@storybook/addons": "^5.1.11",
@@ -52,10 +52,12 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "@types/react-test-renderer": "^16.9.0",
+    "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__addon-storyshots": "^5.1.1",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.18",
     "babel-plugin-macros": "^2.6.1",
+    "eslint": "^6.2.1",
     "eslint-config-thorocaine": "^1.0.1",
     "react-scripts": "3.1.1",
     "react-test-renderer": "^16.9.0",

@@ -1,5 +1,8 @@
 {
     "extends": "thorocaine",
+    "globals": {
+        "module": true
+    },
     "rules": {
         "jsx-a11y/label-has-for": [
             2,

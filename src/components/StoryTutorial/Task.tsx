@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import './Task.css';
 import PropTypes from 'prop-types';

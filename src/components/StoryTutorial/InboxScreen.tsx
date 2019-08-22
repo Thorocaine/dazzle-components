@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { defaultTasks } from './TaskList.stories';
 import TaskList from './TaskList';
 import {actions } from './Task.stories';
 // import TaskList from './TaskList';
 
-type Props = {error: string};
+type Props = {error?: string};
 
 function PureInboxScreen({ error }: Props): JSX.Element 
 {

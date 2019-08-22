@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
 import { PureInboxScreen } from './InboxScreen';
 
 storiesOf('InboxScreen', module)
