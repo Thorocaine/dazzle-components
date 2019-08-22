@@ -10,6 +10,14 @@
 				"$tsc-watch"
 			],
 			"isBackground": true
+		},
+		{
+			"type": "npm",
+			"script": "storybook",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"isBackground": true
 		}
 	]
 }

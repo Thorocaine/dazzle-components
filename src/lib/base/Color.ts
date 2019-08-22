@@ -1,13 +1,15 @@
 import { css, InterpolationValue } from 'styled-components';
 
-const t = new Array();
+const t = [];
 
-class Color extends Array<InterpolationValue> {
+class Color extends Array<InterpolationValue> 
+{
   constructor(
     public readonly hue: number,
     public readonly saturation: number,
     public readonly light: number
-  ) {
+  ) 
+{
     super(1);
     this[0] = `hsl(${hue}, ${saturation}%, ${light}%)`;
   }
@@ -32,7 +34,8 @@ class Color extends Array<InterpolationValue> {
     this.turn(270)
   ];
 
-  public triadic = (arch: number = 120): [Color, Color] => {
+  public triadic = (arch = 120): [Color, Color] => 
+{
     const first = (360 - arch) / 2;
     return [this.turn(first), this.turn(first + arch)];
   };

@@ -1,17 +1,14 @@
 import React, { ReactNode } from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import ITheme, { defaultTheme } from './ITheme';
+import { createGlobalStyle, ThemeProvider, ThemeProps } from 'styled-components';
+import ThemeConfig from './config';
 
 interface IProps {
   children: ReactNode[];
-  theme: Partial<ITheme>;
+  theme: ThemeConfig;
 }
 
-export interface IThemedProps {
-  theme: ITheme;
-}
 
-const GlobalStyle = createGlobalStyle<IThemedProps>`
+const GlobalStyle = createGlobalStyle<ThemeProps<ThemeConfig>>`
   body, html {
 	  background: ${({ theme }) => theme.background};
     margin: 0;
@@ -22,14 +19,13 @@ const GlobalStyle = createGlobalStyle<IThemedProps>`
   }
 `;
 
-function Theme({ children, theme }: IProps) {
-  const fullTheme = { ...defaultTheme, ...theme };
+function Theme({ children, theme }: IProps) 
+{
   return (
-    <ThemeProvider theme={fullTheme}>
-      <>
+    <ThemeProvider theme={theme}>
+        <>
         <GlobalStyle />
-        {children}
-      </>
+        {children}</>
     </ThemeProvider>
   );
 }

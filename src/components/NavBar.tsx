@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Block, { IBlockProps } from '../base/Block';
-import { IThemedProps } from '../theme/Theme';
+import Block, { BlockProps } from '../lib/base/Block';
+import ThemeConfig from '../lib/theme/config';
 
-const NavBarBlockProps = ({ theme }: IThemedProps): IBlockProps => ({
-  background: theme.primaryColor,
+const NavBarBlockProps = ({ theme }: {theme: ThemeConfig}): BlockProps => ({
+  background: theme.primary,
   flex: {
     justifyContent: 'space-between'
   },

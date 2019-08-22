@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
-import { IThemedProps } from '../theme/Theme';
 import Color from './Color';
+import ThemeConfig from '../theme/config';
 
-interface IFlexProps {
+interface FlexProps {
   justifyContent?:
     | 'flex-start'
     | 'flex-end'
@@ -14,7 +14,7 @@ interface IFlexProps {
 
 type SpaceIndex = 0 | 1 | 2 | 3 | 4 | 5;
 
-const Flex = ({ justifyContent }: IFlexProps) => css`
+const Flex = ({ justifyContent }: FlexProps) => css`
   display: flex;
   justify-content: ${justifyContent};
 `;
@@ -29,17 +29,17 @@ const nulldefined = (x: any): x is null | undefined =>
 
 const size = (space: SpaceIndex | undefined, d: SpaceIndex) => ({
   theme: { spacingBase }
-}: IThemedProps) => `${(nulldefined(space) ? d : space) * spacingBase}px`;
+}: {theme: ThemeConfig}) => `${(nulldefined(space) ? d : space) * spacingBase}px`;
 
-export interface IBlockProps {
+export interface BlockProps {
   background?: Color;
-  flex?: IFlexProps;
+  flex?: FlexProps;
   shadow?: true;
   padding?: SpaceIndex;
   margin?: SpaceIndex;
 }
 
-const Block = styled.div<IBlockProps & IThemedProps>`
+const Block = styled.div<BlockProps>`
   width: 100%;
   box-sizing: border-box;
   background: ${({ background }) => background};
