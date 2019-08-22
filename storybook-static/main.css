@@ -1,14 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800);
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
- @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
- 
+ html,
+ body {
+   margin: 0;
+   padding: 0;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ a,
+ abbr,
+ acronym,
+ address,
+ cite,
+ code,
+ del,
+ dfn,
+ em,
+ img,
+ q,
+ s,
+ samp,
+ small,
+ strike,
+ strong,
+ sub,
+ sup,
+ tt,
+ var,
+ dd,
+ dl,
+ dt,
+ li,
+ ol,
+ ul,
+ fieldset,
+ form,
+ label,
+ legend,
+ button,
+ table,
+ caption,
+ tbody,
+ tfoot,
+ thead,
+ tr,
+ th,
+ td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 100%;
+   line-height: 1;
+   font-family: inherit;
+ }
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ ol,
+ ul {
+   list-style: none;
+ }
+ q:before,
+ q:after,
+ blockquote:before,
+ blockquote:after {
+   content: "";
+ }
+ html {
+   font-size: 100%;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+ }
+ a:focus {
+   outline: thin dotted;
+ }
+ a:hover,
+ a:active {
+   outline: 0;
+ }
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ nav,
+ section {
+   display: block;
+ }
+ audio,
+ canvas,
+ video {
+   display: inline-block;
+   *display: inline;
+   *zoom: 1;
+ }
+ audio:not([controls]) {
+   display: none;
+ }
+ sub,
+ sup {
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+ }
+ sup {
+   top: -0.5em;
+ }
+ sub {
+   bottom: -0.25em;
+ }
+ img {
+   border: 0;
+   -ms-interpolation-mode: bicubic;
+ }
+ button,
+ input,
+ select,
+ textarea {
+   font-size: 100%;
+   margin: 0;
+   vertical-align: baseline;
+   *vertical-align: middle;
+ }
+ button,
+ input {
+   line-height: normal;
+   *overflow: visible;
+ }
+ button::-moz-focus-inner,
+ input::-moz-focus-inner {
+   border: 0;
+   padding: 0;
+ }
+ button,
+ input[type="button"],
+ input[type="reset"],
+ input[type="submit"] {
+   cursor: pointer;
+   -webkit-appearance: button;
+ }
+ input[type="search"] {
+   -webkit-appearance: textfield;
+   box-sizing: content-box;
+ }
+ input[type="search"]::-webkit-search-decoration {
+   -webkit-appearance: none;
+ }
+ textarea {
+   overflow: auto;
+   vertical-align: top;
+ }
+ @-webkit-keyframes spin {
+   0% {
+     -webkit-transform: rotate(0deg);
+             transform: rotate(0deg);
+   }
+   100% {
+     -webkit-transform: rotate(359deg);
+             transform: rotate(359deg);
+   }
+ }
+ @keyframes spin {
+   0% {
+     -webkit-transform: rotate(0deg);
+             transform: rotate(0deg);
+   }
+   100% {
+     -webkit-transform: rotate(359deg);
+             transform: rotate(359deg);
+   }
+ }
+ @-webkit-keyframes glow {
+   0%,
+   100% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0.5;
+   }
+ }
+ @keyframes glow {
+   0%,
+   100% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0.5;
+   }
+ }
  .force-wrap {
    word-wrap: break-word;
    word-break: break-all;
    -ms-word-break: break-all;
    word-break: break-word;
-   hyphens: auto;
+   -webkit-hyphens: auto;
+       -ms-hyphens: auto;
+           hyphens: auto;
  }
  .type-light {
    font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -23,7 +226,132 @@
    font-weight: 400;
    font-style: italic;
  }
-
+ * {
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   -webkit-tap-highlight-color: transparent;
+ }
+ html,
+ button,
+ input,
+ textarea,
+ select {
+   outline: none;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ body {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-style: 400;
+   color: #333;
+   font-size: 16px;
+   background-color: #26c6da;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-style: 400;
+   margin: 0;
+   padding: 0;
+ }
+ h1 {
+   font-size: 40px;
+   line-height: 48px;
+ }
+ h2 {
+   font-size: 28px;
+   line-height: 32px;
+ }
+ h3 {
+   font-size: 24px;
+   line-height: 28px;
+ }
+ h4 {
+   font-size: 20px;
+   line-height: 24px;
+ }
+ h5 {
+   font-size: 14px;
+   line-height: 20px;
+   color: #ccc;
+   text-transform: uppercase;
+ }
+ h6 {
+   color: #aaa;
+ }
+ p {
+   font-size: 16px;
+   line-height: 24px;
+ }
+ sub,
+ sup {
+   font-size: 0.8em;
+ }
+ sub {
+   bottom: -0.2em;
+ }
+ sup {
+   top: -0.2em;
+ }
+ b {
+   font-weight: bold;
+ }
+ em {
+   font-style: italic;
+ }
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ textarea {
+   font-size: 14px;
+   line-height: 20px;
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-style: 400;
+   padding: .75rem 0;
+   line-height: 1.5rem !important;
+   border: none;
+   border-radius: 0;
+   box-sizing: border-box;
+   color: #333;
+   outline: none;
+ }
+ input[type="text"] ::-webkit-input-placeholder,
+ input[type="email"] ::-webkit-input-placeholder,
+ input[type="password"] ::-webkit-input-placeholder,
+ textarea ::-webkit-input-placeholder {
+   color: #778b91;
+ }
+ input[type="text"] ::-moz-placeholder,
+ input[type="email"] ::-moz-placeholder,
+ input[type="password"] ::-moz-placeholder,
+ textarea ::-moz-placeholder {
+   color: #778b91;
+ }
+ input[type="text"] ::-ms-input-placeholder,
+ input[type="email"] ::-ms-input-placeholder,
+ input[type="password"] ::-ms-input-placeholder,
+ textarea ::-ms-input-placeholder {
+   color: #778b91;
+ }
+ input[type="text"] ::placeholder,
+ input[type="email"] ::placeholder,
+ input[type="password"] ::placeholder,
+ textarea ::placeholder {
+   color: #778b91;
+ }
+ input[type="text"][disabled],
+ input[type="email"][disabled],
+ input[type="password"][disabled],
+ textarea[disabled] {
+   opacity: .5;
+ }
+ input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0 1000px white inset;
+ }
  .checkbox {
    display: inline-block;
    height: 3rem;
@@ -43,7 +371,8 @@
    left: 50%;
    width: 0.85em;
    height: 0.85em;
-   transform: translate3d(-50%, -50%, 0);
+   -webkit-transform: translate3d(-50%, -50%, 0);
+           transform: translate3d(-50%, -50%, 0);
    background: transparent;
    box-shadow: #2cc5d2 0 0 0 1px inset;
    content: '';
@@ -59,6 +388,8 @@
    speak: none;
    font-style: normal;
    font-weight: normal;
+   -webkit-font-feature-settings: normal;
+           font-feature-settings: normal;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
@@ -90,8 +421,10 @@
  }
  .input-symbol [class^="icon-"],
  .input-symbol [class*=" icon-"] {
+   -webkit-transition: all 300ms ease-in;
    transition: all 300ms ease-in;
-   transform: translate3d(0, -50%, 0);
+   -webkit-transform: translate3d(0, -50%, 0);
+           transform: translate3d(0, -50%, 0);
    background: transparent;
    color: #aaa;
    font-size: 1em;
@@ -113,6 +446,8 @@
    speak: none;
    font-style: normal;
    font-weight: normal;
+   -webkit-font-feature-settings: normal;
+           font-feature-settings: normal;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
@@ -508,6 +843,7 @@
    content: "\e670";
  }
  a {
+   -webkit-transition: all 200ms ease-in;
    transition: all 200ms ease-in;
    color: #5db9ff;
    cursor: pointer;
@@ -536,7 +872,8 @@
  }
  .list-heading .icon-sync {
    opacity: 1;
-   animation: spin 2s infinite linear;
+   -webkit-animation: spin 2s infinite linear;
+           animation: spin 2s infinite linear;
    display: inline-block;
    margin-right: 4px;
  }
@@ -548,13 +885,14 @@
    height: 3rem;
    width: 100%;
    background: white;
+   -webkit-transition: all ease-out 150ms;
    transition: all ease-out 150ms;
  }
  .list-item .title {
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
-   flex: 1;
+   flex: 1 1;
  }
  .list-item input[type="text"] {
    background: transparent;
@@ -564,6 +902,7 @@
    cursor: text;
  }
  .list-item .actions {
+   -webkit-transition: all 200ms ease-in;
    transition: all 200ms ease-in;
    padding-right: 20px;
  }
@@ -592,6 +931,8 @@
    color: #aaa;
  }
  .list-item:hover {
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#e5f9f7), to(#f0fffd));
+   background-image: -webkit-linear-gradient(top, #e5f9f7 0%, #f0fffd 100%);
    background-image: linear-gradient(to bottom, #e5f9f7 0%, #f0fffd 100%);
  }
  .list-item:hover .checkbox {
@@ -618,7 +959,8 @@
  }
  .loading-item .glow-checkbox,
  .loading-item .glow-text span {
-   animation: glow 1.5s ease-in-out infinite;
+   -webkit-animation: glow 1.5s ease-in-out infinite;
+           animation: glow 1.5s ease-in-out infinite;
    background: #eee;
    color: transparent;
    cursor: progress;
@@ -649,7 +991,8 @@
    left: 0;
    width: auto;
    height: auto;
-   transform: translate3d(0, -50%, 0);
+   -webkit-transform: translate3d(0, -50%, 0);
+           transform: translate3d(0, -50%, 0);
    text-align: center;
  }
  .wrapper-message [class^="icon-"],
@@ -704,3 +1047,5 @@
    max-width: 100%;
  }
  
+
+/*# sourceMappingURL=main.css.map*/
