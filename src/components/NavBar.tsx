@@ -1,17 +1,14 @@
 import styled from 'styled-components';
-import Block, { BlockProps } from '../lib/base/Block';
-import ThemeConfig from '../lib/theme/config';
+import shadow from 'styles/shadow';
+import flexRow from 'styles/flexRow';
 
-const NavBarBlockProps = ({ theme }: {theme: ThemeConfig}): BlockProps => ({
-  background: theme.primary,
-  flex: {
-    justifyContent: 'space-between'
-  },
-  padding: 4,
-  margin: 0,
-  shadow: true
-});
-
-const NavBar = styled(Block).attrs(NavBarBlockProps)``;
+const NavBar = styled.nav`
+  ${flexRow}
+  ${shadow}
+  background-color: #00f;
+  color: white;
+  padding: 5px;
+  margin: 0;
+`;
 
 export default NavBar;
