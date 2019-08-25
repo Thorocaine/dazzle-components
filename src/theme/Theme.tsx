@@ -1,16 +1,15 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { createGlobalStyle, ThemeProvider, ThemeProps } from 'styled-components';
-import ThemeConfig from './config';
+import ThemeConfig from './ThemeConfig';
 
-interface IProps {
-  children: ReactNode[];
+type Props = {
+  children: JSX.Element | JSX.Element[];
   theme: ThemeConfig;
 }
 
-
+// background: ${({ theme }) => theme.background};
 const GlobalStyle = createGlobalStyle<ThemeProps<ThemeConfig>>`
-  body, html {
-	  background: ${({ theme }) => theme.background};
+  body, html {	  
     margin: 0;
 	  padding: 0;
 	  width: 100%;
@@ -19,8 +18,12 @@ const GlobalStyle = createGlobalStyle<ThemeProps<ThemeConfig>>`
   }
 `;
 
-function Theme({ children, theme }: IProps) 
+
+
+
+function Theme({ children, theme }: Props): JSX.Element
 {
+  // debugger;
   return (
     <ThemeProvider theme={theme}>
         <>

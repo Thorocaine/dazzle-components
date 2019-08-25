@@ -1,6 +1,6 @@
 import { css, InterpolationValue } from 'styled-components';
 
-const t = [];
+// const t = [];
 
 class Color extends Array<InterpolationValue> 
 {
