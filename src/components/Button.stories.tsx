@@ -1,14 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import {  text } from '@storybook/addon-knobs/react';
-
+import { text } from '@storybook/addon-knobs/react';
 import Button from './Button';
+import StoryVariants from 'stories/storyVariants';
 
+const children = text('children', 'Button Text');
 
-export const actions = {
+const actions = {
   onClick: action('onClick'),
 };
 
 storiesOf('Button', module)
-.add('default', () => <Button type="button" {...actions}>{text('children', 'Button Text')}</Button>);
+  .add('Default', () => <Button type="button" {...actions}>{children}</Button>)
+  .add('Variants', () => <StoryVariants InlineComponent={Button} valueProp="children" />)
+  .add('Disabled', () => <StoryVariants InlineComponent={Button} valueProp="children" disabled />)

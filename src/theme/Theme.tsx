@@ -23,12 +23,12 @@ const GlobalStyle = createGlobalStyle<ThemeProps<ThemeConfig>>`
 
 function Theme({ children, theme }: Props): JSX.Element
 {
-  // debugger;
   return (
     <ThemeProvider theme={theme}>
         <>
         <GlobalStyle />
-        {children}</>
+        {children}
+        </>
     </ThemeProvider>
   );
 }

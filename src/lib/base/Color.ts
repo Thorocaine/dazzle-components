@@ -1,15 +1,12 @@
 import { css, InterpolationValue } from 'styled-components';
 
-// const t = [];
-
-class Color extends Array<InterpolationValue> 
+class Color extends Array<InterpolationValue>
 {
   constructor(
     public readonly hue: number,
     public readonly saturation: number,
     public readonly light: number
-  ) 
-{
+  ) {
     super(1);
     this[0] = `hsl(${hue}, ${saturation}%, ${light}%)`;
   }
@@ -25,6 +22,9 @@ class Color extends Array<InterpolationValue>
   public turn = (x: number) =>
     new Color(this.hue + x, this.saturation, this.light);
 
+  public saturate = (x: number) =>
+    new Color(this.hue, this.saturation + x, this.light);
+
   public complementary = () => this.turn(180);
   public narrow = (): [Color, Color] => this.triadic(30);
   public split = (): [Color, Color] => this.triadic(60);
@@ -34,8 +34,7 @@ class Color extends Array<InterpolationValue>
     this.turn(270)
   ];
 
-  public triadic = (arch = 120): [Color, Color] => 
-{
+  public triadic = (arch = 120): [Color, Color] => {
     const first = (360 - arch) / 2;
     return [this.turn(first), this.turn(first + arch)];
   };
@@ -49,9 +48,6 @@ const test = css`
 const test2 = css`
   ${test}
 `;
-
-// const t = Color.red();
-// const b = t['color'];
 
 export default Color;
 export { test2 };

@@ -1,0 +1,3 @@
+type BaseProps = {
+    variant?: 'primary';
+};
