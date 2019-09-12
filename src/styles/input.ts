@@ -1,5 +1,5 @@
-import { css } from "styled-components";
-import { colorFromTheme } from "theme/fromTheme";
+import { css } from 'styled-components';
+import { colorFromTheme } from 'theme/fromTheme';
 
 const input = css`
     border: 1px solid ${colorFromTheme('#ced4da')};

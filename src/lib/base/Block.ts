@@ -24,12 +24,14 @@ const Shadow = () => css`
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 `;
 
-const nulldefined = (x: any): x is null | undefined =>
+const nulldefined = (x: unknown): x is null | undefined =>
   x === null || x === undefined;
 
 const size = (space: SpaceIndex | undefined, d: SpaceIndex) => ({
   theme: { spacingBase }
-}: {theme: ThemeConfig}) => `${(nulldefined(space) ? d : space) * spacingBase}px`;
+}: {
+  theme: ThemeConfig;
+}) => `${(nulldefined(space) ? d : space) * spacingBase}px`;
 
 export interface BlockProps {
   background?: Color;

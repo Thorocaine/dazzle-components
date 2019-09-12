@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react';
 
 type Component<T extends InnerProps> = (props: T) => React.ReactElement;
 type InnerProps = { disabled?: boolean } & BaseProps;
 type Props<T extends InnerProps> = InnerProps & {
-    InlineComponent: Component<T>
-    valueProp: string,
+    InlineComponent: Component<T>;
+    valueProp: string;
 };
 
-function StoryVariants<T extends InnerProps>({InlineComponent, valueProp, ...props}: Props<T>) {
+function StoryVariants<T extends InnerProps>({InlineComponent, valueProp, ...props}: Props<T>) 
+{
   const Inline = InlineComponent as Component<InnerProps>;
     return (
       <>
