@@ -1,3 +1,4 @@
 type BaseProps = {
-    variant?: 'primary';
+  disabled?: boolean;
+  variant?: 'primary';
 };
