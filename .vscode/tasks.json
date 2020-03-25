@@ -5,26 +5,11 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "start",
-			"problemMatcher": [
-				"$tsc-watch"
-			],
-			"isBackground": true
-		},
-		{
-			"type": "npm",
 			"script": "storybook",
 			"problemMatcher": [
 				"$tsc-watch"
 			],
 			"isBackground": true
-		},
-		{
-			"type": "npm",
-			"script": "lint",
-			"problemMatcher": [
-				"$eslint-stylish"
-			]
 		}
 	]
 }

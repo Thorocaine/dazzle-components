@@ -1,37 +1,22 @@
 {
   "name": "dazzle-components",
-  "version": "1.0.0-beta.0",
+  "version": "0.1.0",
   "description": "a UI component library for myself to play with",
-  "main": "index.js",
-  "dependencies": {
-    "react": "^16.9.0"
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src --ext .ts,.tsx --color --fix",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook"
   },
-  "eslintConfig": {
-    "extends": "thorocaine"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Thorocaine/dazzle-components.git"
   },
   "keywords": [
-    "UI",
     "react",
-    "styled-components"
+    "css",
+    "styled-components",
+    "ui"
   ],
   "author": "Jonathan Peel",
   "license": "MIT",
@@ -40,36 +25,14 @@
   },
   "homepage": "https://github.com/Thorocaine/dazzle-components#readme",
   "devDependencies": {
-    "@storybook/addon-a11y": "^5.1.11",
-    "@storybook/addon-actions": "^5.1.11",
-    "@storybook/addon-info": "^5.1.11",
-    "@storybook/addon-knobs": "^5.1.11",
-    "@storybook/addon-links": "^5.1.11",
-    "@storybook/addon-storyshots": "^5.1.11",
-    "@storybook/addon-viewport": "^5.1.11",
-    "@storybook/addons": "^5.1.11",
-    "@storybook/react": "^5.1.11",
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.2",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.9.0",
-    "@types/react-test-renderer": "^16.9.0",
-    "@types/storybook__addon-info": "^4.1.2",
-    "@types/storybook__addon-knobs": "^5.0.3",
-    "@types/storybook__addon-storyshots": "^5.1.1",
-    "@types/storybook__react": "^4.0.2",
-    "@types/styled-components": "^4.1.18",
-    "babel-plugin-macros": "^2.6.1",
-    "eslint": "^6.2.1",
-    "eslint-config-thorocaine": "^1.0.1",
-    "react-docgen-typescript-loader": "^3.1.1",
-    "react-scripts": "3.1.1",
-    "react-test-renderer": "^16.9.0",
-    "require-context.macro": "^1.1.1",
-    "typescript": "3.5.3"
+    "@storybook/preset-create-react-app": "^2.1.1",
+    "@storybook/react": "^5.3.17",
+    "@types/styled-components": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3"
   },
-  "optionalDependencies": {
-    "react-emotion": "^10.0.0",
-    "styled-components": "^4.3.2"
+  "peerDependencies": {
+    "styled-components": "5.*"
   }
 }
