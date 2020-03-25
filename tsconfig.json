@@ -9,7 +9,7 @@
 		"target": "ES5",
   },
   "include": [
-    "src/index.ts"
+    "src/index.tsx"
 	],
 	"exclude": ["node_modules", "**/__tests__/*"]
 }
